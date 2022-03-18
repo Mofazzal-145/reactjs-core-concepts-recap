@@ -4,22 +4,26 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <District name= 'Thakurgaon' special='vegetable'></District>
+     <District name= 'Baliadangi' special='maramari'></District>
+     <District name= 'Dhaka' special='playboy'></District>
     </div>
   );
+}
+const districtStyle = {
+  backgroundColor: 'yellow',
+  margin : '14px',
+  padding: '12px',
+  borderRadius: '15px'
+}
+
+function District (props) {
+  return (
+    <div style={districtStyle}>
+      <h2>Name: {props.name}</h2>
+      <p>Special: {props.special}</p>
+    </div>
+  )
 }
 
 export default App;
